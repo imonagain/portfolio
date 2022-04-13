@@ -9,6 +9,10 @@ Hover link: #E2ACB9 (light pink)
 Link color: #508f45 (light green)
 Visited link, button: #916646 (brown)
 
+For margin: 0 auto; to work ---
+The element must be block-level, e.g. display: block or display: table
+The element must not float
+The element must not have a fixed or absolute position
 
 */
 
@@ -24,13 +28,14 @@ body {
   min-width: 800px;
   max-width: 1200px;
   width: 100%;
-  line-height: 25px;
+  line-height: 20px;
 
 }
 
 h1, h2, h3 {
   font-color: #8F4553;
-  letter-spacing: 3px;
+  letter-spacing: 2.5px;
+  text-variant: small-caps;
 }
 
 
@@ -43,7 +48,7 @@ li {
 a {
   color: #508f45;
   font-weight: 700;
-  text-transform: lowercase;
+  text-transform: small-caps;
   text-decoration: none;
 }
 
@@ -63,33 +68,13 @@ a:visited {
 
 a:hover, a:focus {
   font-variant: small-caps;
-  font-size: 22px;
+  font-weight: 700;
   color: #E2ACB9;
 }
 
 a:active {
   background-color: #F4F3F1;
 }
-
-/*
-.button {
-  border: none;
-  background-color: #916646;
-  font-family: inherit;
-  color: #fff;
-  text-decoration: none;
-  padding: 10px 15px;
-  border-radius: 3px;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
-}
-
-.button:hover, .button:focus {
-  cursor: crosshair;
-  font-weight: 700;
-  font-variant:small-caps;
-  opacity: 0.6;
-}
-*/
 
 .button, button {
   /* overwrites browser defaults and resets the border */
@@ -119,39 +104,29 @@ button:focus,
   opacity: 0.8;
 }
 
-.linkedin:hover, .twitter:hover, .github:hover {
-  opacity: 0.2;
-}
-
 /* Header */
 
-/*
-.header--body {
-  display: flex;
-  margin: 0 auto;
-}
-*/
 
-.header {
-  background-color: inherit;
+.header, header {
+  background-color: #E6E5E3;
+  border-bottom: 1px solid;
+  box-shadow: 1px 2px 4px #5c5959;
   position: fixed;
-  width: inherit;
-  z-index: 1;
-  margin: 0 auto;
+  top: 0px;
+  width: 100%;
+  z-index: 10;
   display: flex;
-  border-bottom: 1px solid black;
 }
 
 .header--logo {
+  padding: 10px;
   width: 250px;
   flex: 0 1 200px;
-  margin-top: 20px;
-  margin-left: 40px;
 }
 
 .header--nav {
   list-style-type: none;
-  padding: 20px;
+  padding: 10px;
 }
 
 .header--nav:last-child {
@@ -162,57 +137,106 @@ button:focus,
 .header-nav ul, li {
   line-height: 22px;
   display: inline-block;
-  margin-left: 15px;
+  margin-left: 5px;
 
 }
 
-/* Profile */
+.menubar li+li::before{
+  content: "|";
+  color: #508f45;
+}
 
-.profile {
+/* Main */
+
+
+main {
   padding-top: 175px;
-  display: flex;
+  min-width: 300px
   width: 100%;
-  justify-content: center;
-  align-content: center;
-}
-
-.profile--display {
-  width: 65%;
-  justify-content: center;
-  align-content: center;
-}
-
-.profile--portrait {
-  flex: 0 1 200px;
-  border-radius: 50%;
-  width: 175px;
-  float: left;
-  padding: 5px;
-  margin-right: 25px;
-}
-
-.profile--text:last-child {
-  padding: 15px;
-  flex-grow: 1;
-}
-
-/* Work */
-
-.work {
-  padding-top: 175px;
-  width: 0 auto;
-}
-
-.work h1 {
+  display: flex;
+  flex-flow: column wrap;
   text-align: center;
 }
 
-.work__grid {
+.profile--display {
+  width: 600px;
+  align-self: center;
+  flex-wrap: wrap;
+}
+
+.profile--display img {
+  width: 175px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 1em;
+}
+
+.about,
+.about__image,
+.about__table,
+.contact--text,
+.contact--form  {
+  align-self: center;
+  padding: 0px 50px;
+  text-align: left;
+}
+
+.contact--form {
+  border: 1px solid black;
+  box-shadow: 0px 2px 4px gray;
   padding: 10px;
+  margin-top: 3em;
+}
+
+input {
+  float: right;
+}
+
+label {
+  padding: 0em 1em;
+}
+
+.about__image img,{
+  float: left;
+  margin-right: 1em;
+}
+
+.about__button {
+  margin: 2em 0em;
+  align-self: center;
+}
+
+table {
+  width: 450px;
+  padding-top: 2em;
+  margin: auto;
+  text-align: center;
+}
+
+table th {
+  font-weight: bold;
+  background: darkgray;
+}
+
+#about-picture {
+  width: 600px;
+  align-self: center;
+}
+
+.work__grid {
+  padding: 1em;
+  text-align: justify;
   margin: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 5px;
+}
+
+.work__grid h2 a {
+  background-color: gray;
+  color: white;
+  text-align: left;
+  font-size: 20px;
 }
 
 .work__grid--item {
@@ -228,7 +252,6 @@ button:focus,
 }
 
 
-
 /* Footer */
 
 .page--footer {
@@ -237,7 +260,7 @@ button:focus,
   flex-direction: column;
   margin: 0 auto;
   padding: 20px;
-  z-index: 1;
+  z-index: 11;
   text-align: center;
 }
 
@@ -248,8 +271,13 @@ button:focus,
 .linkedin, .twitter, .github {
   padding: 2px;
   width: 30px;
-
 }
+
+.linkedin:hover, .twitter:hover, .github:hover {
+  opacity: 0.2;
+}
+
+/* Media */
 
   @media all and (max-width: 500px) {
     .work__grid {
@@ -272,4 +300,49 @@ button:focus,
   h1 {
     font-size: 22px;
   }
+}
+
+/* Animations */
+
+@keyframes color-change {
+  0% {
+    fill: #edc655;
+  }
+  50% {
+    fill: #fcffad;
+  }
+  100% {
+    fill: #f76414;
+  }
+}
+
+.sun {
+  animation: 4s color-change infinite alternate linear;
+}
+
+
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 50px);
+  }
+  to {
+    transform: translate(200px, 50px);
+  }
+}
+
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+
+@keyframes cloud-move-reverse {
+  from {
+    transform: translate(446px, 48px);
+  }
+  to {
+    transform: translate(100px, 48px);
+  }
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
 }
