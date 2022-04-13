@@ -1,0 +1,275 @@
+/*
+
+Colors used:
+
+Text main: #8F4553 (light maroon/purple)
+Text light: #F4F3F1 (white)
+Background: #E6E5E3 (grey)
+Hover link: #E2ACB9 (light pink)
+Link color: #508f45 (light green)
+Visited link, button: #916646 (brown)
+
+
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Comfortaa', 'Arial', san-serif;
+  font-weight: 400;
+  color: #8F4553;
+  background-color: #E6E5E3;
+  min-width: 800px;
+  max-width: 1200px;
+  width: 100%;
+  line-height: 25px;
+
+}
+
+h1, h2, h3 {
+  font-color: #8F4553;
+  letter-spacing: 3px;
+}
+
+
+li {
+  color: #000;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+a {
+  color: #508f45;
+  font-weight: 700;
+  text-transform: lowercase;
+  text-decoration: none;
+}
+
+span {
+  background-color: #000;
+  color: yellow;
+  font-family: 'Courier New', serif;
+  letter-spacing: 1.2px;
+  padding: 1px 3px;
+  vertical-align: middle;
+}
+
+a:visited {
+  color: #916646
+  text-decoration:line-through;
+}
+
+a:hover, a:focus {
+  font-variant: small-caps;
+  font-size: 22px;
+  color: #E2ACB9;
+}
+
+a:active {
+  background-color: #F4F3F1;
+}
+
+/*
+.button {
+  border: none;
+  background-color: #916646;
+  font-family: inherit;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 3px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+.button:hover, .button:focus {
+  cursor: crosshair;
+  font-weight: 700;
+  font-variant:small-caps;
+  opacity: 0.6;
+}
+*/
+
+.button, button {
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  display: inline-block;
+  /* takes the font from the outer container */
+  font-family: inherit;
+  /* styles the button */
+  background-color: #357b70;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  /* width of the border, type, color */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  transition-duration: 0.2s;
+  transition-property: opacity;
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+  /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+  /* reduces the opacity of the button to 80% */
+  opacity: 0.8;
+}
+
+.linkedin:hover, .twitter:hover, .github:hover {
+  opacity: 0.2;
+}
+
+/* Header */
+
+/*
+.header--body {
+  display: flex;
+  margin: 0 auto;
+}
+*/
+
+.header {
+  background-color: inherit;
+  position: fixed;
+  width: inherit;
+  z-index: 1;
+  margin: 0 auto;
+  display: flex;
+  border-bottom: 1px solid black;
+}
+
+.header--logo {
+  width: 250px;
+  flex: 0 1 200px;
+  margin-top: 20px;
+  margin-left: 40px;
+}
+
+.header--nav {
+  list-style-type: none;
+  padding: 20px;
+}
+
+.header--nav:last-child {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.header-nav ul, li {
+  line-height: 22px;
+  display: inline-block;
+  margin-left: 15px;
+
+}
+
+/* Profile */
+
+.profile {
+  padding-top: 175px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+}
+
+.profile--display {
+  width: 65%;
+  justify-content: center;
+  align-content: center;
+}
+
+.profile--portrait {
+  flex: 0 1 200px;
+  border-radius: 50%;
+  width: 175px;
+  float: left;
+  padding: 5px;
+  margin-right: 25px;
+}
+
+.profile--text:last-child {
+  padding: 15px;
+  flex-grow: 1;
+}
+
+/* Work */
+
+.work {
+  padding-top: 175px;
+  width: 0 auto;
+}
+
+.work h1 {
+  text-align: center;
+}
+
+.work__grid {
+  padding: 10px;
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 5px;
+}
+
+.work__grid--item {
+  padding: 40px;
+}
+
+.work__grid--item:last-child {
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+
+}
+
+
+
+/* Footer */
+
+.page--footer {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 20px;
+  z-index: 1;
+  text-align: center;
+}
+
+.page--footer h3 {
+  letter-spacing: normal;
+}
+
+.linkedin, .twitter, .github {
+  padding: 2px;
+  width: 30px;
+
+}
+
+  @media all and (max-width: 500px) {
+    .work__grid {
+    grid-template-columns: 1fr;
+  }
+}
+  @media all and (min-width: 500px) and (max-width: 750px){
+  .work__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+  @media all and (max-width: 750px) {
+  .work__grid {
+    grid-gap: 10px;
+  }
+  .work__grid--item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
