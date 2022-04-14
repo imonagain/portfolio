@@ -5,16 +5,6 @@
 * Browsers: last 4 version
 */
 
-/*
-
-NOTE:
-For margin: 0 auto; to work ---
-The element must be block-level, e.g. display: block or display: table
-The element must not float
-The element must not have a fixed or absolute position
-
-*/
-
 :root { /*Hunter Green Light*/ /*Hunter Green Dark*/ /*Copper Red*/ /*New York Pink (Lighter)*/ /*Cedar Chest (Darker)*/ /*Old Mauve*/ /*Twilight Lavender (Lighter)*/ /*Dark Purple*/ /*Baby Powder*/
 }
 
