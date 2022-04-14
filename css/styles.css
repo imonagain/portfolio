@@ -1,20 +1,27 @@
 /*
 
-Colors used:
-
-Text main: #8F4553 (light maroon/purple)
-Text light: #F4F3F1 (white)
-Background: #E6E5E3 (grey)
-Hover link: #E2ACB9 (light pink)
-Link color: #508f45 (light green)
-Visited link, button: #916646 (brown)
-
+NOTE:
 For margin: 0 auto; to work ---
 The element must be block-level, e.g. display: block or display: table
 The element must not float
 The element must not have a fixed or absolute position
 
+PostCSS playground: https://madlittlemods.github.io/postcss-css-variables/playground/
+Autoprefixer: http://autoprefixer.github.io/
+
 */
+
+:root {
+  --primary-color: #495F41; /*Hunter Green Light*/
+  --secondary-color: #2E5339; /*Hunter Green Dark*/
+  --accent1-color: #C46D5E; /*Copper Red*/
+  --accent1L2-color: #D39388; /*New York Pink (Lighter)*/
+  --acent1D2-color: #BD5D4C; /*Cedar Chest (Darker)*/
+  --accent2-color: #61304B; /*Old Mauve*/
+  --accent2L2-color: #7B3D5F; /*Twilight Lavender (Lighter)*/
+  --accent2D2-color: #442235; /*Dark Purple*/
+  --base-color: #FFFCF7; /*Baby Powder*/
+}
 
 * {
   box-sizing: border-box;
@@ -23,8 +30,8 @@ The element must not have a fixed or absolute position
 body {
   font-family: 'Comfortaa', 'Arial', san-serif;
   font-weight: 400;
-  color: #8F4553;
-  background-color: #E6E5E3;
+  color: var(--primary-color);
+  background-color: var(--base-color);
   min-width: 800px;
   max-width: 1200px;
   width: 100%;
@@ -33,20 +40,19 @@ body {
 }
 
 h1, h2, h3 {
-  font-color: #8F4553;
+  font-color: var(--secondary-color);
   letter-spacing: 2.5px;
   text-variant: small-caps;
 }
 
 
 li {
-  color: #000;
   font-size: 18px;
   line-height: 30px;
 }
 
 a {
-  color: #508f45;
+  color: var(--accent2-color);
   font-weight: 700;
   text-transform: small-caps;
   text-decoration: none;
@@ -63,7 +69,7 @@ span {
 }
 
 a:visited {
-  color: #916646
+  color: var(--accent2D2-color);
   text-decoration:line-through;
 }
 
@@ -71,11 +77,11 @@ a:hover, a:focus {
   font-size: inherit;
   font-variant: none;
   font-weight: 700;
-  color: #E2ACB9;
+  color: var(--accent1-color)
 }
 
 a:active {
-  background-color: #F4F3F1;
+  background-color: var(--accent1L2-color);
 }
 
 .button, button {
@@ -83,7 +89,7 @@ a:active {
   display: inline-block;
   font-family: inherit;
   /* styles the button */
-  background-color: #357b70;
+  background-color: var(--accent2L2-color);
   color: white;
   text-decoration: none;
   padding: 10px;
@@ -96,21 +102,18 @@ button:hover,
 button:focus,
 .button:hover,
 .button:focus {
-  /* lets the mouse appear as a hand when hovering over the button */
   cursor: pointer;
-  /* reduces the opacity of the button to 80% */
   opacity: 0.8;
-  background-color: black;
-  color: white;
+  background-color: var(--acent1D2-color);
+  color: var(--base-color);
 }
 
 /* Header */
 
 
 .header, header {
-  background-color: #E6E5E3;
-  border-bottom: 1px solid;
-  box-shadow: 1px 2px 4px #5c5959;
+  background-color: inherit;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
   position: fixed;
   top: 0px;
   width: 100%;
@@ -143,12 +146,10 @@ button:focus,
 
 .menubar li+li::before{
   content: "|";
-  color: #508f45;
+  color: var(--secondary-color);
 }
 
 /* Main */
-
-
 main {
   padding-top: 175px;
   min-width: 500px;
@@ -183,7 +184,7 @@ main {
 }
 
 .contact--form {
-  border: 1px solid black;
+  border: 1px solid #000;
   box-shadow: 0px 2px 4px gray;
   padding: 10px;
   margin-top: 3em;
@@ -216,7 +217,7 @@ table {
 
 table th {
   font-weight: bold;
-  background: darkgray;
+  background: var(--accent1D2-color);
 }
 
 #about-picture {
