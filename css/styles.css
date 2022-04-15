@@ -217,7 +217,7 @@ table {
 
 table th {
   font-weight: bold;
-  background: var(--accent1D2-color);
+  background-color: var(--accent1D2-color);
 }
 
 #about-picture {

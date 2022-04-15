@@ -273,12 +273,15 @@ table {
   width: 450px;
   padding-top: 2em;
   margin: auto;
-  text-align: center;
+  text-align: left;
 }
 
 table th {
   font-weight: bold;
-  background: undefined;
+  background-color: #61304B;
+  color: #fff;
+  padding: 2px 5px;
+  text-align: center;
 }
 
 #about-picture {
