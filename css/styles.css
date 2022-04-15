@@ -45,9 +45,8 @@ h1, h2, h3 {
   text-variant: small-caps;
 }
 
-
 li {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 30px;
 }
 
@@ -84,13 +83,14 @@ a:active {
   background-color: var(--accent1L2-color);
 }
 
-.button, button {
+button,
+.button,
+.about__button {
   border: none;
   display: inline-block;
   font-family: inherit;
-  /* styles the button */
   background-color: var(--accent2L2-color);
-  color: white;
+  color: #fff;
   text-decoration: none;
   padding: 10px;
   border-radius: 3px;
@@ -111,7 +111,8 @@ button:focus,
 /* Header */
 
 
-.header, header {
+header,
+.header {
   background-color: inherit;
   box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
   position: fixed;
@@ -123,7 +124,7 @@ button:focus,
 
 .header--logo {
   padding: 10px;
-  width: 250px;
+  width: 200px;
   flex: 0 1 200px;
 }
 
@@ -188,6 +189,7 @@ main {
   box-shadow: 0px 2px 4px gray;
   padding: 10px;
   margin-top: 3em;
+  width: 500px;
 }
 
 input {
@@ -203,10 +205,12 @@ label {
   margin-right: 1em;
 }
 
+/*
 .about__button {
   margin: 2em 0em;
   align-self: center;
 }
+*/
 
 table {
   width: 450px;
