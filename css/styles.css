@@ -248,7 +248,6 @@ table th {
   clear: both;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
   padding: 20px;
   z-index: 11;
   text-align: center;
@@ -301,49 +300,4 @@ table th {
   h1 {
     font-size: 18px;
   }
-}
-
-/* Animations */
-
-@keyframes cloud-move {
-  from {
-    transform: translate(0, 50px);
-  }
-  to {
-    transform: translate(200px, 50px);
-  }
-}
-
-.cloud-front {
-  animation: 30s cloud-move infinite alternate linear;
-}
-
-
-@keyframes cloud-move-reverse {
-  from {
-    transform: rotate(0deg) translate(446px, 48px);
-  }
-  to {
-    transform: rotate(20deg) translate(100px, 48px);
-  }
-}
-
-.cloud-back {
-  animation: 5s cloud-move-reverse infinite alternate ease;
-}
-
-@keyframes color-change {
-  0% {
-    fill: blue;
-  }
-  50% {
-    fill: pink;
-  }
-  100% {
-    fill: purple;
-  }
-}
-
-.sun {
-  animation: 4s color-change infinite alternate linear;
 }
