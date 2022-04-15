@@ -1,16 +1,9 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.3.6,
-* Autoprefixer: v10.3.1
-* Browsers: last 4 version
-*/
 
 :root { /*Hunter Green Light*/ /*Hunter Green Dark*/ /*Copper Red*/ /*New York Pink (Lighter)*/ /*Cedar Chest (Darker)*/ /*Old Mauve*/ /*Twilight Lavender (Lighter)*/ /*Dark Purple*/ /*Baby Powder*/
 }
 
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -43,9 +36,8 @@ h3 {
   text-variant: small-caps;
 }
 
-
 li {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 30px;
 }
 
@@ -89,35 +81,42 @@ a:active {
   background-color: #D39388;
 }
 
-.button {
-  border: none;
-  display: inline-block;
-  font-family: inherit;
-  /* styles the button */
-  background-color: #7B3D5F;
-  color: white;
-  text-decoration: none;
-  padding: 10px;
-  border-radius: 3px;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  -webkit-transition: 0.2s opacity, 0.5s background-color;
-  -o-transition: 0.2s opacity, 0.5s background-color;
-  transition: 0.2s opacity, 0.5s background-color;
-}
-
 button {
   border: none;
   display: inline-block;
   font-family: inherit;
-  /* styles the button */
   background-color: #7B3D5F;
-  color: white;
+  color: #fff;
   text-decoration: none;
   padding: 10px;
   border-radius: 3px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  -webkit-transition: 0.2s opacity, 0.5s background-color;
-  -o-transition: 0.2s opacity, 0.5s background-color;
+  transition: 0.2s opacity, 0.5s background-color;
+}
+
+.button {
+  border: none;
+  display: inline-block;
+  font-family: inherit;
+  background-color: #7B3D5F;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  transition: 0.2s opacity, 0.5s background-color;
+}
+
+.about__button {
+  border: none;
+  display: inline-block;
+  font-family: inherit;
+  background-color: #7B3D5F;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   transition: 0.2s opacity, 0.5s background-color;
 }
 
@@ -152,25 +151,21 @@ button:focus {
 /* Header */
 
 
-.header, header {
+header,
+.header {
   background-color: inherit;
-  -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
-          box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
   position: fixed;
   top: 0px;
   width: 100%;
   z-index: 10;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .header--logo {
   padding: 10px;
-  width: 250px;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 200px;
-          flex: 0 1 200px;
+  width: 200px;
+  flex: 0 1 200px;
 }
 
 .header--nav {
@@ -179,9 +174,7 @@ button:focus {
 }
 
 .header--nav:last-child {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-grow: 1;
   text-align: right;
 }
 
@@ -193,33 +186,25 @@ button:focus {
 }
 
 .menubar li+li::before{
-  content: "|";
   color: #2E5339;
 }
 
 /* Main */
+
 main {
   padding-top: 175px;
   min-width: 500px;
   max-width: 1200px;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
+  flex-flow: column wrap;
   text-align: center;
 }
 
 .profile--display {
   width: 600px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  align-self: center;
+  flex-wrap: wrap;
 }
 
 .profile--display img {
@@ -231,30 +216,32 @@ main {
 
 .about,
 .about__image,
-.about__table,
-.contact--text,
-.contact--form  {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+.about__table  {
+  align-self: center;
   padding: 0px 50px;
   text-align: left;
 }
 
+.contact--instr {
+  line-height: 30px;
+}
 .contact--form {
+  display: grid;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-self: center;
   border: 1px solid #000;
-  -webkit-box-shadow: 0px 2px 4px gray;
-          box-shadow: 0px 2px 4px gray;
+  border-radius: 5%;
+  box-shadow: 0px 2px 4px gray;
   padding: 10px;
   margin-top: 3em;
-}
-
-input {
-  float: right;
+  width: 375px;
 }
 
 label {
-  padding: 0em 1em;
+  text-align: left;
+  display: inline-block;
+  width: 140px;
 }
 
 .about__image img,{
@@ -262,42 +249,28 @@ label {
   margin-right: 1em;
 }
 
-.about__button {
-  margin: 2em 0em;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
-
 table {
   width: 450px;
   padding-top: 2em;
   margin: auto;
-  text-align: left;
+  text-align: center;
 }
 
 table th {
   font-weight: bold;
-  background-color: #61304B;
-  color: #fff;
-  padding: 2px 5px;
-  text-align: center;
+  background-color: undefined;
 }
 
 #about-picture {
   width: 600px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
 }
 
 .grid {
   padding: 1em;
   text-align: justify;
   margin: 10px;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 10px 1fr 10px 1fr 10px 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 10px;
 }
@@ -310,14 +283,8 @@ table th {
 
 .page--footer {
   clear: both;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin: 0 auto;
+  flex-direction: column;
   padding: 20px;
   z-index: 11;
   text-align: center;
@@ -340,29 +307,26 @@ table th {
 
 @media all and (max-width: 500px) {
   .grid {
-    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     grid-gap: 5px;
 }
   h1 {
-    font-size: 14px;
+    font-size: 18px;
   }
 }
 
 @media all and (min-width: 600px) and (max-width: 700px){
   .grid {
-    -ms-grid-columns: 1fr 7px 1fr;
     grid-template-columns: 1fr 1fr;
     grid-gap: 7px;
 }
   h1 {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
 @media all and (min-width: 800px) and (max-width: 900px) {
   .grid {
-    -ms-grid-columns: 1fr 10px 1fr 10px 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 10px;
   }
@@ -373,91 +337,4 @@ table th {
   h1 {
     font-size: 18px;
   }
-}
-
-/* Animations */
-
-@-webkit-keyframes cloud-move {
-  from {
-    -webkit-transform: translate(0, 50px);
-            transform: translate(0, 50px);
-  }
-  to {
-    -webkit-transform: translate(200px, 50px);
-            transform: translate(200px, 50px);
-  }
-}
-
-@keyframes cloud-move {
-  from {
-    -webkit-transform: translate(0, 50px);
-            transform: translate(0, 50px);
-  }
-  to {
-    -webkit-transform: translate(200px, 50px);
-            transform: translate(200px, 50px);
-  }
-}
-
-.cloud-front {
-  -webkit-animation: 30s cloud-move infinite alternate linear;
-          animation: 30s cloud-move infinite alternate linear;
-}
-
-
-@-webkit-keyframes cloud-move-reverse {
-  from {
-    -webkit-transform: rotate(0deg) translate(446px, 48px);
-            transform: rotate(0deg) translate(446px, 48px);
-  }
-  to {
-    -webkit-transform: rotate(20deg) translate(100px, 48px);
-            transform: rotate(20deg) translate(100px, 48px);
-  }
-}
-
-
-@keyframes cloud-move-reverse {
-  from {
-    -webkit-transform: rotate(0deg) translate(446px, 48px);
-            transform: rotate(0deg) translate(446px, 48px);
-  }
-  to {
-    -webkit-transform: rotate(20deg) translate(100px, 48px);
-            transform: rotate(20deg) translate(100px, 48px);
-  }
-}
-
-.cloud-back {
-  -webkit-animation: 5s cloud-move-reverse infinite alternate ease;
-          animation: 5s cloud-move-reverse infinite alternate ease;
-}
-
-@-webkit-keyframes color-change {
-  0% {
-    fill: blue;
-  }
-  50% {
-    fill: pink;
-  }
-  100% {
-    fill: purple;
-  }
-}
-
-@keyframes color-change {
-  0% {
-    fill: blue;
-  }
-  50% {
-    fill: pink;
-  }
-  100% {
-    fill: purple;
-  }
-}
-
-.sun {
-  -webkit-animation: 4s color-change infinite alternate linear;
-          animation: 4s color-change infinite alternate linear;
 }
