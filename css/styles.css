@@ -1,11 +1,5 @@
 /*
 
-NOTE:
-For margin: 0 auto; to work ---
-The element must be block-level, e.g. display: block or display: table
-The element must not float
-The element must not have a fixed or absolute position
-
 PostCSS playground: https://madlittlemods.github.io/postcss-css-variables/playground/
 Autoprefixer: http://autoprefixer.github.io/
 
