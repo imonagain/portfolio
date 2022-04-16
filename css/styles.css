@@ -6,15 +6,15 @@ Autoprefixer: http://autoprefixer.github.io/
 */
 
 :root {
-  --primary-color: #495f41; /* Hunter Green Light */
-  --secondary-color: #2e5339; /* Hunter Green Dark */
-  --accent1-color: #c46d5e; /* Copper Red */
-  --accent1L2-color: #d39388; /* New York Pink (Lighter) */
-  --acent1D2-color: #bd5d4c; /* Cedar Chest (Darker) */
-  --accent2-color: #61304b; /* Old Mauve */
-  --accent2L2-color: #7b3d5f; /* Twilight Lavender (Lighter) */
-  --accent2D2-color: #442235; /* Dark Purple */
-  --base-color: #fffcf7; /* Baby Powder */
+  --primary-color: #495f41;
+  --secondary-color: #2e5339;
+  --accent1-color: #c46d5e;
+  --accent1L2-color: #d39388;
+  --acent1D2-color: #bd5d4c;
+  --accent2-color: #61304b;
+  --accent2L2-color: #7b3d5f;
+  --accent2D2-color: #442235;
+  --base-color: #fffcf7;
 }
 
 * {
@@ -243,17 +243,13 @@ table th {
 
 /* Footer */
 
-.page--footer {
+footer {
   clear: both;
   display: flex;
   flex-direction: column;
   padding: 20px;
   z-index: 11;
   text-align: center;
-}
-
-.page--footer h3 {
-  letter-spacing: normal;
 }
 
 .linkedin,

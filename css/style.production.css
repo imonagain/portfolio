@@ -1,16 +1,3 @@
-
-:root {
-  --primary-color: #495f41; /* Hunter Green Light */
-  --secondary-color: #2e5339; /* Hunter Green Dark */
-  --accent1-color: #c46d5e; /* Copper Red */
-  --accent1L2-color: #d39388; /* New York Pink (Lighter) */
-  --acent1D2-color: #bd5d4c; /* Cedar Chest (Darker) */
-  --accent2-color: #61304b; /* Old Mauve */
-  --accent2L2-color: #7b3d5f; /* Twilight Lavender (Lighter) */
-  --accent2D2-color: #442235; /* Dark Purple */
-  --base-color: #fffcf7; /* Baby Powder */
-}
-
 * {
   box-sizing: border-box;
 }
@@ -18,18 +5,26 @@
 body {
   font-family: 'Comfortaa', 'Arial', san-serif;
   font-weight: 400;
-  color: var(--primary-color);
-  background-color: var(--base-color);
+  color: #495f41;
+  background-color: #fffcf7;
   min-width: 800px;
   max-width: 1200px;
   width: 100%;
   line-height: 20px;
 }
 
-h1,
-h2,
+h1 {
+  color: #2e5339;
+  letter-spacing: 2.5px;
+}
+
+h2 {
+  color: #2e5339;
+  letter-spacing: 2.5px;
+}
+
 h3 {
-  color: var(--secondary-color);
+  color: #2e5339;
   letter-spacing: 2.5px;
 }
 
@@ -39,7 +34,7 @@ li {
 }
 
 a {
-  color: var(--accent2-color);
+  color: #61304b;
   font-weight: 700;
   text-transform: small-caps;
   text-decoration: none;
@@ -56,29 +51,33 @@ span {
 }
 
 a:visited {
-  color: var(--accent2D2-color);
+  color: #442235;
   text-decoration: line-through;
 }
 
-a:hover,
+a:hover {
+  font-size: inherit;
+  font-variant: none;
+  font-weight: 700;
+  color: #c46d5e;
+}
+
 a:focus {
   font-size: inherit;
   font-variant: none;
   font-weight: 700;
-  color: var(--accent1-color);
+  color: #c46d5e;
 }
 
 a:active {
-  background-color: var(--accent1L2-color);
+  background-color: #d39388;
 }
 
-button,
-.button,
-.about__button {
+button {
   border: none;
   display: inline-block;
   font-family: inherit;
-  background-color: var(--accent2L2-color);
+  background-color: #7b3d5f;
   color: #fff;
   text-decoration: none;
   padding: 10px;
@@ -87,14 +86,58 @@ button,
   transition: 0.2s opacity, 0.5s background-color;
 }
 
-button:hover,
-button:focus,
-.button:hover,
+.button {
+  border: none;
+  display: inline-block;
+  font-family: inherit;
+  background-color: #7b3d5f;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  transition: 0.2s opacity, 0.5s background-color;
+}
+
+.about__button {
+  border: none;
+  display: inline-block;
+  font-family: inherit;
+  background-color: #7b3d5f;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  transition: 0.2s opacity, 0.5s background-color;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  background-color: #bd5d4c;
+  color: #fffcf7;
+}
+
+button:focus {
+  cursor: pointer;
+  opacity: 0.8;
+  background-color: #bd5d4c;
+  color: #fffcf7;
+}
+
+.button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  background-color: #bd5d4c;
+  color: #fffcf7;
+}
+
 .button:focus {
   cursor: pointer;
   opacity: 0.8;
-  background-color: var(--acent1D2-color);
-  color: var(--base-color);
+  background-color: #bd5d4c;
+  color: #fffcf7;
 }
 
 /* Header */
@@ -134,7 +177,7 @@ li {
 }
 
 .menubar li + li::before {
-  color: var(--secondary-color);
+  color: #2e5339;
 }
 
 /* Main */
@@ -214,7 +257,7 @@ table {
 
 table th {
   font-weight: bold;
-  background-color: var(--accent1D2-color);
+  background-color: undefined;
 }
 
 #about-picture {
@@ -237,17 +280,13 @@ table th {
 
 /* Footer */
 
-.page--footer {
+footer {
   clear: both;
   display: flex;
   flex-direction: column;
   padding: 20px;
   z-index: 11;
   text-align: center;
-}
-
-.page--footer h3 {
-  letter-spacing: normal;
 }
 
 .linkedin,
